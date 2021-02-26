@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mongodb-express
+  name: mongodb-express
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb-express
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mongodb-express
+    spec:
+      containers:
+      - image: mong-express
+        name: mong-express
+        resources: {}
+status: {}
